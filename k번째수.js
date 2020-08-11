@@ -6,7 +6,6 @@ function solution(array, commands){
     for (let i = 0; i < commands.length; i++) {
         temp = array.slice(commands[i][0]-1, commands[i][1]);
         temp.sort((a,b) => a - b);
-        console.log(temp);
          result.push(temp[commands[i][2] - 1]);
     }
     return result;
