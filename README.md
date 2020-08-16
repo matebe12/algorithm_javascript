@@ -55,3 +55,17 @@ solution(arr, arr2);
 
 ### issue  k번째수
 - 정렬 함수를 잘못 사용하고 있었다. 자바스크립트의 경우 array.sort() 인자에 아무 값도 넣지 않는다면 아스키 코드 순서대로 정렬을 한다. 그래서 test2에서 자꾸 실패가 떳는데 mdn문서를 확인해보니 위의 문제를 알 수 있었고 sort((a,b) => a-b)를 추가 하였다. 
+
+
+## 프로그래머스 정렬 가장 큰수 
+
+```
+var answer = 	[6, 10, 2];
+let sortnum = answer.map(c=> c + '').
+sort((a,b) => (b+a) - (a+b)).join('');
+sortnum.charAt(0) ==='0'? '0' : sortnum;
+console.log(sortnum);
+```
+
+### issue 가장 큰 수
+- sortnum.charAt(0) ==='0'? '0' : sortnum; 을 변수에 할당해서 return을 하게 되면 테스트 11에서 실패를 하였다. 그래서 변수에 할당하지 않고 바로 return을 시켜 통과했다. 
