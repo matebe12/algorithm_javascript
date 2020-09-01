@@ -15,12 +15,18 @@
             cnt[2]++;
            }
     }
+    let st1Max = student1.filter((x,i) => x === student1[i % student1.length]).length;
+    let st2Max = student2.filter((x,i) => x === student2[i % student2.length]).length;
+    let st3Max = student3.filter((x,i) => x === student3[i % student3.length]).length;
     let total = [];
     let big = Math.max(...cnt);
     for(let i = 0; i < cnt.length; i++){
         if(cnt[i] === big){
             total.push(i + 1);
         }
+    }
+    for(let i = 0; i <  cnt.length; i++){
+        if()
     }
 
     console.log(total);
